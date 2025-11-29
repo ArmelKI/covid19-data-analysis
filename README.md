@@ -1,20 +1,43 @@
-# Analyse des données COVID-19 : France, USA, Russie & Afrique du Sud 🌍
+# 🦠 COVID-19 Automated Data Pipeline
 
-Ce projet propose une analyse exploratoire des données COVID-19 pour plusieurs pays, basée sur les données publiques de [Our World in Data](https://ourworldindata.org/covid-cases).
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange)
+![Visualization](https://img.shields.io/badge/Matplotlib-Seaborn-green)
 
-## 🌐 Pays analysés
-- 🇫🇷 France
-- 🇺🇸 États-Unis
-- 🇷🇺 Russie
-- 🇿🇦 Afrique du Sud
+## 📄 Overview
 
-## 📊 Ce que contient le projet
-- Téléchargement automatique du dataset OWID
-- Filtrage des pays d’intérêt
-- Analyse des cas confirmés
-- Visualisation par courbes lissées (moyenne mobile sur 7 jours)
+This project is an automated data visualization tool designed to track COVID-19 infection trends across multiple strategic countries. 
 
-## 🛠️ Fichiers
-- `Analyse_COVID19.ipynb` : notebook Jupyter principal
-- `README.md` : ce fichier
-- `requirements.txt` : dépendances Python
+It implements an **ETL pipeline** that connects directly to the **Our World in Data (OWID)** live repository, processes raw time-series data, and applies a **7-day rolling average algorithm** to smooth out daily reporting noise (e.g., weekend reporting lags).
+
+## 🌍 Scope
+
+The analysis focuses on a comparative study of infection rates in:
+* 🇫🇷 **France**
+* 🇺🇸 **United States**
+* 🇷🇺 **Russia**
+* 🇿🇦 **South Africa**
+
+## ⚙️ Technical Highlights
+
+* **Automated Data Fetching:** The script pulls live data from the remote source every time it runs, ensuring real-time analysis.
+* **Memory Optimization:** Uses `usecols` during CSV parsing to reduce memory footprint by loading only relevant features.
+* **Data Smoothing:** Implementation of a rolling window transformation to normalize data volatility.
+* **Professional Visualization:** High-contrast plotting with Seaborn and formatted numeric axes.
+
+## 🚀 How to Run
+
+1.  **Install dependencies:**
+    ```bash
+    pip install pandas matplotlib seaborn
+    ```
+
+2.  **Run the notebook:**
+    Launch `covid_analysis.ipynb` in Jupyter or VS Code.
+
+## 📊 Sample Output
+
+![COVID-19 Trends](images/covid_trends.png)
+
+---
+*Data Source: [Our World in Data GitHub](https://github.com/owid/covid-19-data)*

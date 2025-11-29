@@ -1,0 +1,21 @@
+# --- Environnements Virtuels (TRÈS IMPORTANT) ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Python ---
+__pycache__/
+*.pyc
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+
+# --- VS Code & Editeurs ---
+.vscode/
+.idea/
+
+# --- Système d'exploitation ---
+.DS_Store
+Thumbs.db
+
