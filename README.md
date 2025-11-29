@@ -29,7 +29,7 @@ The analysis focuses on a comparative study of infection rates in:
 
 1.  **Install dependencies:**
     ```bash
-    pip install pandas matplotlib seaborn
+    pip install -r requirements.txt
     ```
 
 2.  **Run the notebook:**
